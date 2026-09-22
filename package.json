@@ -1,0 +1,19 @@
+{
+  "name": "nyxilum-engine-mcp",
+  "version": "0.1.0",
+  "description": "MCP-сервер для NyxilumEngine (2D ігровий рушій на NyxilumLang) - запуск прикладів/тестів рушія і довідник API.",
+  "type": "module",
+  "bin": {
+    "nyxilum-engine-mcp": "./src/server.js"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test test/smoke.mjs"
+  },
+  "license": "MIT",
+  "author": "Faneraiy14",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "zod": "^3.24.0"
+  }
+}
