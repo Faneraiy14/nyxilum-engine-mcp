@@ -40,3 +40,13 @@ npm install
 "../lib/engine.nx"` дійсно резолвиться при виклику через цей сервер,
 не лише теоретично) і реальним MCP-handshake (`initialize`) через
 stdio-транспорт.
+
+## Docker
+
+```bash
+docker build -t nyxilum-engine-mcp .
+docker run -i --rm nyxilum-engine-mcp
+```
+
+The server speaks MCP over stdio, so keep `-i`. Needs: nothing - `nx` and NyxilumEngine (`main`, or `--build-arg ENGINE_REF=<tag>`) are baked into the image.
+In an MCP client config use `"command": "docker"` with the same arguments.
